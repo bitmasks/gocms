@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<head>
+<head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -10,67 +10,18 @@
     <link rel="shortcut icon" href="static/img/favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="static/css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="static/css/index.css"/>
-
-
-    <style>
-
-        .pagination {
-
-            margin: 40px 0 ;
-            text-align: center  ;
-            font-size: 16px  ;
-        }
-
-        .pagination a {
-            padding: 0 12px;
-            background: #f0f0f0;
-            display: inline-block;
-            line-height: 34px;
-            color: #999;
-            margin: 0 5px;
-            border-radius: 3px;
-        }
-
-
-
-        .pagination .page-item {
-
-            background: #f0f0f0;
-            display: inline-block;
-            line-height: 34px;
-            color: #999;
-            margin: 0 5px;
-            border-radius: 3px;
-            width: 34px;
-        }
-
-        .pagination a:hover {
-            background: #e8e8e8;
-            color: #333;
-        }
-
-        .pagination .active {
-            background: #f54343 ;
-            color: #fff  ;
-        }
-
-        .pagination .page-item:first-child {
-            background: #f0f0f0;
-        }
-
-        .pagination .page-item:last-child {
-            background: #f0f0f0;
-        }
-    </style>
 </head>
 <body>
 <div id="title">
     <div class="wi">
-        <em><a  href="javascript:void(0);" onclick="setHome(this,window.location)">设为首页</a><a href="javascript:void(0)" onMouseOut="hideImg()" onmouseover="showImg()">球掌门APP下载</a></em>
-        最完整的足球资讯-玩玩球官方网站    </div>
+        <em>
+        <a  href="javascript:void(0);" onclick="setHome(this,window.location)">设为首页</a><a href="javascript:void(0)" onMouseOut="hideImg()" onmouseover="showImg()">球掌门APP下载</a>
+        </em>
+        {{.WebsiteIndexName}}
+    </div>
 </div>
 <div id="top">
-    <h1><a href="/">玩玩球</a></h1>
+    <h1><a href="/">{{.WebsiteName}}</a></h1>
     <div class="search">
         <input type="text" class="text"/>
         <input type="button" class="button" value="搜索" onclick="search()"/>
@@ -216,7 +167,7 @@
     </div>
 
 
-    <div class="mt20"><a href="###"><img src="/banner/1100-90-1.jpg"></a></div>
+    <div class="mt20"><a href="###"><img src="static/banner/1100-90-1.jpg"></a></div>
     <div class="tit fixed">
         <b>国际足球</b>
         <em>
@@ -350,7 +301,7 @@
         </div>
             </div>
 
-    <div class="mt20"><a href="###"><img src="/banner/1100-90-2.jpg"></a></div>
+    <div class="mt20"><a href="###"><img src="static/banner/1100-90-2.jpg"></a></div>
     <div class="tit fixed">
         <b>国内足球</b>
         <em>
@@ -468,7 +419,7 @@
         </div>
             </div>
 
-    <div class="mt20"><a href="###"><img src="/banner/1100-90-3.jpg"></a></div>
+    <div class="mt20"><a href="###"><img src="static/banner/1100-90-3.jpg"></a></div>
     <div class="tit fixed">
         <b>综合体育</b>
         <em>
@@ -600,7 +551,7 @@
         </div>
             </div>
 
-    <div class="mt20"><a href="###"><img src="/banner/1100-90-4.jpg"></a></div>
+    <div class="mt20"><a href="###"><img src="static/banner/1100-90-4.jpg"></a></div>
     <div class="tit fixed">
         <b>彩票中心</b>
         <em>
@@ -728,7 +679,7 @@
 
     </div>
 
-    <div class="mt20"><a href="###"><img src="/banner/1100-90-5.jpg"></a></div>
+    <div class="mt20"><a href="###"><img src="static/banner/1100-90-5.jpg"></a></div>
     <div class="tit fixed">
         <b>精选图片</b>
         <em>

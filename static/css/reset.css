@@ -1,11 +1,8 @@
-/********************************************************
-* 通用定义，可组合使用
-********************************************************/
 
 /* reset */
 html, body, div, p, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, input, select, button, textarea, iframe { margin: 0; padding: 0; }
 
-/* 设置默认字体 */
+
 body,
 button, input, select, textarea { 
 	font-size:12px;
@@ -15,21 +12,21 @@ a{ text-decoration:none;}
 
 html{-webkit-text-size-adjust: none;}
 
-em, i { font-style: normal; } /* 将斜体扶正 */
+em, i { font-style: normal; }
 
-/* 去掉链接点击时的虚框 */
-a,area { blr:expression(this.onFocus=this.blur()) } /* for IE7.0及以下版本*/ 
-:focus { outline-style: none; -moz-outline-style: none;} /* for Firefox，IE8.0等 */
+
+a,area { blr:expression(this.onFocus=this.blur()) }
+:focus { outline-style: none; -moz-outline-style: none;}
 
 img, table, input, select, button {vertical-align: middle;}
 img { border: 0 none; vertical-align: top; }
 
-/* 重置列表元素 */
+
 ul, ol { list-style: none; }
 
 button { cursor: pointer; }
 
-/* 对齐&浮动 */
+
 .tal {text-align: left;}
 .tar {text-align: right;}
 .tac{text-align: center;}
@@ -37,21 +34,21 @@ button { cursor: pointer; }
 .fl {float:left; display: inline;}
 .fr {float:right; display: inline;}
 
-/* 清除浮动 */
+
 .fixed:after { content: "."; display: block; clear: both; height: 0; visibility: hidden; }
 .fixed { display: block; min-height: 1%; }
 *html .fixed { height: 1%; }
 .fixed { *zoom: 1; } /* IE6 */
 
-/* 重置表格元素 */
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
 
-/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+
 html { overflow-y: scroll; }
 
-/* 隐藏 */
+
 .none {display: none;}
 
