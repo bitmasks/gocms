@@ -15,7 +15,8 @@ var navList = func(context *context.Context) {
 
 func init() {
 	beego.Include(&controllers.NewsController{})
-	beego.Router("/", &controllers.MainController{})
+
+	beego.Include(&controllers.IndexController{})
 
 	beego.InsertFilter("/:nav/",beego.BeforeExec,navList)
 	beego.InsertFilter("/:nav/:id",beego.BeforeExec,navList)

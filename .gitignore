@@ -10,6 +10,7 @@ views/.DS_Store
 .settings
 .springBeans
 .sts4-cache
+gocms
 
 ### IntelliJ IDEA ###
 .idea

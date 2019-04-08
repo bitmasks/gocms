@@ -4,11 +4,12 @@ import (
 	"github.com/astaxie/beego"
 )
 
-type MainController struct {
+type IndexController struct {
 	beego.Controller
 }
 
-func (c *MainController) Get() {
+// @router /
+func (c *IndexController) Get() {
 	c.Data["WebsiteName"] = "网站名称"
 	c.Data["WebsiteIndexName"] = "网站名称"
 	c.Data["WebsiteKeywords"] = "关键词"
@@ -18,5 +19,5 @@ func (c *MainController) Get() {
 
 	//根据分类的文章列表
 
-	c.TplName = "index.tpl"
+	c.TplName = "index.html"
 }
