@@ -9,5 +9,10 @@ func GetDataInfo(id int64) (*models.Data ,error)   {
 		return data , nil
 	}
 	return nil ,err
+}
 
+func GetDataList(cId string) []models.Data {
+	list := make([]models.Data, 0)
+	engine.Where("category_id=?",cId).Find(&list)
+	return list
 }

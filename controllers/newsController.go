@@ -14,7 +14,11 @@ type NewsController struct {
 
 // @router /:nav/
 func(c *NewsController) List()  {
-	
+	nvId := c.Ctx.Input.Param(":nav")
+	info := service.GetCategoryInfo(nvId)
+	c.Data["Title"] = info.CategoryName
+	c.Data["datalist"] = service.GetDataList(nvId)
+	c.TplName = "list.html"
 }
 
 // @router /:nav/:id

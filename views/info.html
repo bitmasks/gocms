@@ -74,18 +74,10 @@
         <div class="l">
             <a href="/" >
     首页</a>
-<a href="/nba" >
-    篮球NBA</a>
-<a href="/international_football" >
-    国际足球</a>
-<a href="/china_football" >
-    中国足球</a>
-<a href="/comprehensive" >
-    综合体育</a>
-<a href="/lottery" >
-    彩票中心</a>
-<a href="/competition" >
-    赛事分析</a>
+        {{range .Categorys}}
+            <a href="/{{.CategoryId}}/" >
+                {{.CategoryName}}</a>
+        {{end}}
         </div>
     </div>
 </div>

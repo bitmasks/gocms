@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>{{.Title}}</title>
+    <meta name="Keywords" content="综合体育-玩玩球">
+    <meta name="description" content="综合体育-玩玩球资讯,最热门综合体育-玩玩球新闻，最新综合体育-玩玩球消息，最新最全的综合体育-玩玩球热门事件">
+    <link rel="stylesheet" type="text/css" href="http://192.144.205.76/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="http://192.144.205.76/css/index.css"/>
+
+
+    <style>
+
+        .pagination {
+
+            margin: 40px 0 ;
+            text-align: center  ;
+            font-size: 16px  ;
+        }
+
+        .pagination a {
+            padding: 0 12px;
+            background: #f0f0f0;
+            display: inline-block;
+            line-height: 34px;
+            color: #999;
+            margin: 0 5px;
+            border-radius: 3px;
+        }
+
+
+
+        .pagination .page-item {
+
+            background: #f0f0f0;
+            display: inline-block;
+            line-height: 34px;
+            color: #999;
+            margin: 0 5px;
+            border-radius: 3px;
+            width: 34px;
+        }
+
+        .pagination a:hover {
+            background: #e8e8e8;
+            color: #333;
+        }
+
+        .pagination .active {
+            background: #f54343 ;
+            color: #fff  ;
+        }
+
+        .pagination .page-item:first-child {
+            background: #f0f0f0;
+        }
+
+        .pagination .page-item:last-child {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+<div id="title1">
+    <div class="wi">
+        <em><a  href="javascript:void(0);" onclick="setHome(this,window.location)">设为首页</a><a href="javascript:void(0)" onMouseOut="hideImg()" onmouseover="showImg()">球掌门APP下载</a></em>
+        <div class="l">
+            <a href="/" >
+                首页</a>
+            {{range .Categorys}}
+                <a href="/{{.CategoryId}}/" >
+                {{.CategoryName}}</a>
+            {{end}}
+        </div>
+    </div>
+</div>
+<div id="top">
+    <h1><a href="/">玩玩球</a></h1>
+    <div class="search">
+        <input type="text" class="text"/>
+        <input type="button" class="button" value="搜索" onclick="search()"/>
+    </div>
+</div>
+<div class="wi">
+    <div class="showbox fixed">
+        <div class="l">
+            <div id="owl-demo" class="owl-carousel">
+                <a class="item" href="http://192.144.205.76/p/13764" target="_blank">
+                    <img src="https://c2.hoopchina.com.cn/uploads/star/event/images/181210/f7c72dc2b75c11c450d236aa24c2d0904e007a43.png" alt="内维尔吐槽赛事太多:没时间休息和思考">
+                    <b></b><span>内维尔吐槽赛事太多:没时间休息和思考</span>
+                </a>
+                <a class="item" href="/p/13808" target="_blank">
+                    <img src="https://c2.hoopchina.com.cn/uploads/star/event/images/181117/0892ebc61182352a8af3411754be5068760b835b.png" alt="本赛季9次一轮游，林丹：有信心打进奥运">
+                    <b></b><span>本赛季9次一轮游，林丹：有信心打进奥运</span>
+                </a>
+                <a class="item" href="/p/13585" target="_blank">
+                    <img src="https://c1.hoopchina.com.cn/uploads/star/event/images/190405/771f69e091347448be7b6e27403f8e0bcfac3464.png" alt="克洛普：奥里吉训练很努力，上场机会是他自己争取来的">
+                    <b></b><span>克洛普：奥里吉训练很努力，上场机会是他自己争取来的</span>
+                </a>
+                <a class="item" href="/p/13758" target="_blank">
+                    <img src="https://c2.hoopchina.com.cn/uploads/star/event/images/181028/edbdf69b04cbc500f2cefb0b19c03f14fcafac50.png" alt="谌龙：胜桃田因自己比较专注">
+                    <b></b><span>谌龙：胜桃田因自己比较专注</span>
+                </a>
+                <a class="item" href="/p/13751" target="_blank">
+                    <img src="https://c2.hoopchina.com.cn/uploads/star/event/images/181117/a1f98cb714b7dbf932c86dabc64bbc904a4682ca.png" alt="石宇奇：身体不舒服影响表现，比赛多拍没占优势">
+                    <b></b><span>石宇奇：身体不舒服影响表现，比赛多拍没占优势</span>
+                </a>
+            </div>
+            <ul class="tjli1">
+                {{range .datalist}}
+                    <li>
+                        <a href="/p/14663">
+                            <span><img src="{{.Cover}}"></span>
+                            <h3>{{.Title}}</h3>
+                            <p>{{dateformat .CreatedAt "2006-01-02 15:04:05"}} 查看</p>
+                        </a>
+                    </li>
+                {{end}}
+
+            </ul>
+            <div class="page">
+                <ul class="pagination" role="navigation">
+
+                    <li class="page-item disabled" aria-disabled="true" aria-label="« Previous">
+                        <span class="page-link" aria-hidden="true">‹</span>
+                    </li>
+
+
+
+
+
+                    <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+                    <li class="page-item"><a class="page-link" href="http://192.144.205.76/comprehensive?page=2">2</a></li>
+                    <li class="page-item"><a class="page-link" href="http://192.144.205.76/comprehensive?page=3">3</a></li>
+                    <li class="page-item"><a class="page-link" href="http://192.144.205.76/comprehensive?page=4">4</a></li>
+                    <li class="page-item"><a class="page-link" href="http://192.144.205.76/comprehensive?page=5">5</a></li>
+                    <li class="page-item"><a class="page-link" href="http://192.144.205.76/comprehensive?page=6">6</a></li>
+                    <li class="page-item"><a class="page-link" href="http://192.144.205.76/comprehensive?page=7">7</a></li>
+                    <li class="page-item"><a class="page-link" href="http://192.144.205.76/comprehensive?page=8">8</a></li>
+
+                    <li class="page-item disabled" aria-disabled="true"><span class="page-link">...</span></li>
+
+
+
+
+
+                    <li class="page-item"><a class="page-link" href="http://192.144.205.76/comprehensive?page=11">11</a></li>
+                    <li class="page-item"><a class="page-link" href="http://192.144.205.76/comprehensive?page=12">12</a></li>
+
+
+                    <li class="page-item">
+                        <a class="page-link" href="http://192.144.205.76/comprehensive?page=2" rel="next" aria-label="Next »">›</a>
+                    </li>
+                </ul>
+
+
+
+            </div>
+        </div>
+        <div class="r">
+            <p class="rti1">推荐阅读</p>
+            <ul class="tjli">
+                <li>
+                    <a href="/p/13722">
+                        <span><img src="https://c1.hoopchina.com.cn/uploads/star/event/images/181117/3f9be247a49133e8751dbc01f47ce79524df1fe3.png"></span>
+                        <h3>李龙大：作为自由人参赛无压力</h3>
+                        <p>2019-04-06 00:38:38</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/p/13630">
+                        <span><img src="http://wwqiu.static.044310.com/facc1412584211e99da3525400135976.jpg"></span>
+                        <h3>勇士卫冕nba西部冠军 虽然杜兰特被离场仍大胜掘金</h3>
+                        <p>2019-04-05 13:51:54</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/p/13570">
+                        <span><img src="http://xhimg.sports.cn/Image/allimg/180827/7-1PRGFF22T.jpg"></span>
+                        <h3>2018北京马拉松博览会再升级 展商火热招募中</h3>
+                        <p>2019-04-05 13:11:12</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/p/13753">
+                        <span><img src="https://c1.hoopchina.com.cn/uploads/star/event/images/181209/595fa6a328b555e8dd84fd43a5acd12cd8db9f48.png"></span>
+                        <h3>国羽单打教练：林丹需坚持自律</h3>
+                        <p>2019-04-06 00:41:01</p>
+                    </a>
+                </li>
+            </ul>
+            <p class="rti1">阅读排行榜</p>
+            <ul class="phbli">
+                <li>
+                    <i class="s">1</i>
+                    <a href="/p/13768">
+                        泰国女队尤伯杯夺银创历史，被奖励1400万泰铢
+                    </a>
+                </li>
+                <li>
+                    <i class="s">2</i>
+                    <a href="/p/13643">
+                        旗开得胜！苏炳添赛季首秀60米6秒52夺冠
+                    </a>
+                </li>
+                <li>
+                    <i class="s">3</i>
+                    <a href="/p/13562">
+                        2018年中国马拉松由量变到质变 全年共计1581场
+                    </a>
+                </li>
+                <li>
+                    <i >4</i>
+                    <a href="/p/13694">
+                        波波维奇开场63秒被驱逐 裁判连吹两次技术犯规
+                    </a>
+                </li>
+                <li>
+                    <i >5</i>
+                    <a href="/p/13741">
+                        丹麦主场无人晋级决赛，主帅乔纳森直言不满
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="wxImg" style="height: 20px;position: absolute;top: 30px;right: 160px; display: none;z-index: 999;">
+        <img src="http://www.qiuzhangmen.com/images/qzm-app-3.png" style="width: 100px"/>
+    </div>
+    <div class="footer">
+        <p>
+            Copyright © 2019 All Rights Reserved. 玩玩球 版权所有
+        </p>
+    </div>
+</div>
+<script type="text/javascript" src="http://192.144.205.76/js/jquery.js"></script>
+<script type="text/javascript" src="http://192.144.205.76/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="http://192.144.205.76/js/common.js"></script>
+<script>
+    $(function () {
+        $('#owl-demo').owlCarousel({
+            items: 1,
+            navigation: true,
+            navigationText: ["上一个", "下一个"],
+            autoPlay: true,
+            stopOnHover: true
+        }).hover(function () {
+            $('.owl-buttons').show();
+        }, function () {
+            $('.owl-buttons').hide();
+        });
+    });
+</script>
+</body>
+</html>
