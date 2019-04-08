@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>{{.Title}}</title>
+    <meta name="Keywords" content="内维尔吐槽赛事太多:没时间休息和思考-玩玩球">
+    <meta name="description" content="{{.Desc}}">
+    <link rel="stylesheet" type="text/css" href="http://192.144.205.76/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="http://192.144.205.76/css/index.css"/>
+
+
+    <style>
+
+        .pagination {
+
+            margin: 40px 0 ;
+            text-align: center  ;
+            font-size: 16px  ;
+        }
+
+        .pagination a {
+            padding: 0 12px;
+            background: #f0f0f0;
+            display: inline-block;
+            line-height: 34px;
+            color: #999;
+            margin: 0 5px;
+            border-radius: 3px;
+        }
+
+
+
+        .pagination .page-item {
+
+            background: #f0f0f0;
+            display: inline-block;
+            line-height: 34px;
+            color: #999;
+            margin: 0 5px;
+            border-radius: 3px;
+            width: 34px;
+        }
+
+        .pagination a:hover {
+            background: #e8e8e8;
+            color: #333;
+        }
+
+        .pagination .active {
+            background: #f54343 ;
+            color: #fff  ;
+        }
+
+        .pagination .page-item:first-child {
+            background: #f0f0f0;
+        }
+
+        .pagination .page-item:last-child {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<style>
+    .showi em span:last-child {
+        border-right: #f0f0f0 0px solid;
+    }
+</style>
+<body>
+
+<div id="title1">
+    <div class="wi">
+        <em><a  href="javascript:void(0);" onclick="setHome(this,window.location)">设为首页</a><a href="javascript:void(0)" onMouseOut="hideImg()" onmouseover="showImg()">球掌门APP下载</a></em>
+        <div class="l">
+            <a href="/" >
+    首页</a>
+<a href="/nba" >
+    篮球NBA</a>
+<a href="/international_football" >
+    国际足球</a>
+<a href="/china_football" >
+    中国足球</a>
+<a href="/comprehensive" >
+    综合体育</a>
+<a href="/lottery" >
+    彩票中心</a>
+<a href="/competition" >
+    赛事分析</a>
+        </div>
+    </div>
+</div>
+
+<div id="top">
+    <h1><a href="/">玩玩球</a></h1>
+    <div class="linkt">
+        <a href="/">首页</a>
+        >
+        <a href="/comprehensive">综合体育</a>
+
+    </div>
+</div>
+
+<div class="wi">
+
+    <h1 class="btb">{{.Title}}</h1>
+
+    <div class="showi">
+        <h2></h2>
+        <h3>2019-04-08 04:12:17</h3>
+        <em class="bdsharebuttonbox">
+            <span><a href="#" class="qq" data-cmd="sqq" title="分享到QQ好友">QQ</a></span>
+            <span><a href="#" class="weibo" data-cmd="tsina" title="分享到新浪微博">微博</a></span>
+            <span><a href="#" class="weixin" data-cmd="weixin" title="分享到微信">微信</a></span>
+
+        </em>
+    </div>
+
+    <div class="showbox fixed">
+
+        <div class="l">
+
+            <div class="navbox" style="max-width:730px !important; ">
+                {{str2html .Content}}
+            </div>
+
+
+
+        </div>
+
+        <div class="r">
+
+                        <p class="rti1">推荐阅读</p>
+
+            <ul class="tjli">
+
+                                <li>
+                    <a href="/p/13470">
+                        <span><img src="http://wwqiu.static.044310.com/d56169e248da11e996bd186590dcc693.jpg"></span>
+                        <h3>意甲5-3大战，36岁夸神抽刀斩落叶！射手榜超C罗2球</h3>
+                        <p>2019-03-17 11:26</p>
+                    </a>
+                </li>
+                                <li>
+                    <a href="/p/13841">
+                        <span><img src="http://wwqiu.static.044310.com/f915ad1457dd11e995b1525400135976.jpg"></span>
+                        <h3>UOL：加入竞争，埃弗顿和多特要和米兰争夺内雷斯</h3>
+                        <p>2019-04-05 20:04:08</p>
+                    </a>
+                </li>
+                                <li>
+                    <a href="/p/13737">
+                        <span><img src="https://c1.hoopchina.com.cn/uploads/star/event/images/181117/827776b9b0beabb67d98862a789411c7cb247118.png"></span>
+                        <h3>伍家朗：桃田若非在最佳状态，也不是必胜</h3>
+                        <p>2019-04-08 04:10:21</p>
+                    </a>
+                </li>
+                                <li>
+                    <a href="/p/13164">
+                        <span><img src="http://wwqiu.static.044310.com/0be55212582611e99a2e525400135976.jpg"></span>
+                        <h3>佬牛任九：19023期胜负彩临场推荐(任九11转9)</h3>
+                        <p>2019-04-06 04:05:04</p>
+                    </a>
+                </li>
+                                <li>
+                    <a href="/p/13815">
+                        <span><img src="http://wwqiu.static.044310.com/51982de257c311e9a8ad525400135976.jpg"></span>
+                        <h3>五佳球：库里骚气背传助飞杜兰特，卡鲁索惊天补扣位列榜首</h3>
+                        <p>2019-04-05 16:53:16</p>
+                    </a>
+                </li>
+                            </ul>
+
+                        <p class="rti1">阅读排行榜</p>
+            <ul class="phbli">
+                                <li>
+                    <i class="s">1</i>
+                    <a href="/p/13738">
+                        夏煊泽现身媒体沟通会，给林丹提出两个字：自律
+                    </a>
+                </li>
+                                <li>
+                    <i class="s">2</i>
+                    <a href="/p/13556">
+                        郑凤荣首破女子跳高世界纪录纪念活动在京举行
+                    </a>
+                </li>
+                                <li>
+                    <i class="s">3</i>
+                    <a href="/p/13729">
+                        国羽小将爆冷夺冠：胜在心态
+                    </a>
+                </li>
+                                <li>
+                    <i >4</i>
+                    <a href="/p/13587">
+                        欧少赛抽签：荷兰遇法国英格兰，西班牙碰意大利德国
+                    </a>
+                </li>
+                                <li>
+                    <i >5</i>
+                    <a href="/p/13572">
+                        朱婷11分瓦基弗主场0-3完败 欧冠半决赛出师不利
+                    </a>
+                </li>
+                            </ul>
+
+
+        </div>
+
+    </div>
+
+    <div id="wxImg" style="height: 20px;position: absolute;top: 30px;right: 160px; display: none;z-index: 999;">
+    <img src="http://www.qiuzhangmen.com/images/qzm-app-3.png" style="width: 100px"/>
+</div>
+<div class="footer">
+    <p>
+        Copyright © 2019 All Rights Reserved. 玩玩球 版权所有
+    </p>
+</div>
+
+
+</div>
+<script type="text/javascript" src="http://192.144.205.76/js/jquery.js"></script>
+<script type="text/javascript" src="http://192.144.205.76/js/common.js"></script>
+
+
+<script>
+    window._bd_share_config = {
+        "common": {
+            "bdSnsKey": {},
+            "bdText": "",
+            "bdMini": "1",
+            "bdMiniList": false,
+            "bdPic": "",
+            "bdStyle": "0",
+            "bdSize": "32"
+        }, "share": {}
+    };
+    with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+</script>
+</body>
+</html>
