@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"github.com/astaxie/beego"
+	"gocms/service"
 )
 
 type IndexController struct {
@@ -14,10 +15,10 @@ func (c *IndexController) Get() {
 	c.Data["WebsiteIndexName"] = "网站名称"
 	c.Data["WebsiteKeywords"] = "关键词"
 	c.Data["WebsiteDescription"] = "网站描述"
-	//c.Data["datalist"] = service.GetDataList(1)
-	//todo  分类列表
+	c.Data["Nav"] = service.GetCate()
 
-	//根据分类的文章列表
-
+	c.Data["Block1"] = service.GetList(1)
+	c.Data["Block2"] = service.GetList(4)
 	c.TplName = "index.html"
 }
+

@@ -27,49 +27,27 @@
         <input type="button" class="button" value="搜索" onclick="search()"/>
     </div>
 </div>
+
 <div id="menut">
     <div class="wi">
-        <a href="/" >
-    首页</a>
-<a href="/nba" >
-    篮球NBA</a>
-<a href="/international_football" >
-    国际足球</a>
-<a href="/china_football" >
-    中国足球</a>
-<a href="/comprehensive" >
-    综合体育</a>
-<a href="/lottery" >
-    彩票中心</a>
-<a href="/competition" >
-    赛事分析</a>
+        <a href="/">首页</a>
+        {{range .Nav}}<a href="/{{.CategoryId}}/">{{.CategoryName}}</a>
+        {{end}}
     </div>
 </div>
-<div id="menub">
-    <div class="wi">
-                <a href="/nba">
-            篮球NBA        </a>
-                <a href="/lottery">
-            彩票中心        </a>
-                <a href="/competition">
-            赛事分析        </a>
-                <a href="/comprehensive">
-            体育博文        </a>
-                <a href="/china_football">
-            中国足球        </a>
-                <a href="/international_football">
-            国际足球        </a>
-            </div>
-</div>
+
+
+
 <div class="wi">
     <div class="fixed mt20">
         <div class="boxl">
 
             <div class="limgt">
-                <a href="/p/14776">
-                    <b>助攻生涯新高助队取胜，卡鲁索18分11助攻全场集锦</b>
-                    <img src="https://c2.hoopchina.com.cn/uploads/star/event/images/190408/20ccff7a2eeef0628e73cc486a20739cbf2c6344.png">
-                </a>
+                {{range .Block1}}<a href="p/{{.Id}}/">
+                        <b>{{.Title}}</b>
+                        <img src="{{.Cover}}">
+                    </a>
+                {{end}}
             </div>
 
             <ul class="fixed imgli">

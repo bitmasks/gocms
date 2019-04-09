@@ -14,10 +14,9 @@ var navList = func(context *context.Context) {
 }
 
 func init() {
+	//默认首页
+	beego.Router("/", &controllers.IndexController{})
 	beego.Include(&controllers.NewsController{})
-
-	beego.Include(&controllers.IndexController{})
-
 	beego.InsertFilter("/:nav/",beego.BeforeExec,navList)
 	beego.InsertFilter("/:nav/:id",beego.BeforeExec,navList)
 }
