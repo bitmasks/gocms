@@ -14,7 +14,7 @@ func (c *IndexController) Get() {
 	c.Data["WebsiteIndexName"] = "网站名称"
 	c.Data["WebsiteKeywords"] = "关键词"
 	c.Data["WebsiteDescription"] = "网站描述"
-
+	//c.Data["datalist"] = service.GetDataList(1)
 	//todo  分类列表
 
 	//根据分类的文章列表
