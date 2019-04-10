@@ -12,7 +12,7 @@ views/.DS_Store
 .sts4-cache
 gocms
 lastupdate.tmp
-
+project.log
 ### IntelliJ IDEA ###
 .idea
 *.iws

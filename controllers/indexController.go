@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/logs"
 	"gocms/service"
 )
 
@@ -16,9 +17,9 @@ func (c *IndexController) Get() {
 	c.Data["WebsiteKeywords"] = "关键词"
 	c.Data["WebsiteDescription"] = "网站描述"
 	c.Data["Nav"] = service.GetCate()
-
-	c.Data["Block1"] = service.GetList(1)
-	c.Data["Block2"] = service.GetList(4)
+	c.Data["Block1"] = service.GetGlobalList()
+	logs.SetLogger(logs.AdapterFile,`{"filename":"project.log","level":7,"maxlines":0,"maxsize":0,"daily":true,"maxdays":10,"color":true}`)
+	logs.Info(c.Data["Block1"])
 	c.TplName = "index.html"
 }
 
