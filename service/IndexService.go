@@ -10,14 +10,14 @@ func GetCate() ([]models.Category) {
 	return list
 }
 
-func GetGlobalList() []models.Data {
+func GetGlobalList(limits int) []models.Data {
 	list := make([]models.Data, 0)
-	engine.Limit(100, 0).Find(&list)
+	engine.Limit(limits, 0).Find(&list)
 	return list
 }
 
-func GetList(limits int) []models.Data {
+func GetList( cid  string , limits int) []models.Data {
 	list := make([]models.Data, 0)
-	engine.Where("id>?", 0).Limit(0, limits).Find(&list)
+	engine.Where("category_id =?", cid).Limit(limits,0).Find(&list)
 	return list
 }
