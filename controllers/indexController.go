@@ -33,29 +33,41 @@ func (c *IndexController) Get() {
 	c.Data["Block4"] = firstScreen[12:17]
 	c.Data["Block5"] = firstScreen[18:32]
 
+	type IndexBlock struct {
+		data         [5][]models.Data
+		categoryId   string
+		categoryName string
+	}
+
 	type indexScreenData struct {
-		count int
-		data  [...][...][]models.Data
+		count  int
+		screen [5]IndexBlock
 	}
 	var cat = indexScreenData{}
 	for i, v := range category {
 
 		//data from  per screen
-		var currScreenData = service.GetList(string(v.CategoryId), 100)
-		var block [...][]models.Data
-		block[0] = currScreenData[0:1]
-		block[1] = currScreenData[2:6]
-		block[2] = currScreenData[7:11]
-		block[3] = currScreenData[12:17]
-		block[4] = currScreenData[18:32]
-		cat.data[i] = block
+		var currScreenData = service.GetList(string(v.CategoryId), 32)
+
+		var block = IndexBlock{}
+		block.categoryName = v.CategoryName
+		block.categoryId = v.CategoryId
+		block.data[0] = currScreenData[0:1]
+		block.data[1] = currScreenData[2:6]
+		block.data[2] = currScreenData[7:11]
+		block.data[3] = currScreenData[12:17]
+		block.data[4] = currScreenData[18:32]
+		cat.screen[i] = block
 
 		//count for  data of per screen
 		cat.count = i
+
 	}
 
 	logs.Info(cat)
+
 	c.Data["screen"] = cat
+
 	//view
 	c.TplName = "index.html"
 }
